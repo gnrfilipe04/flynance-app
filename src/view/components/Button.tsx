@@ -4,6 +4,9 @@ interface ButtonProps extends TouchableOpacityProps {
   title: string;
   backgroundColor: string;
   buttonTextColor: string;
+  mrVertical?: number;
+  mrTop?: number;
+  mrBottom?: number;
 }
 
 export default function Button(props: ButtonProps){
@@ -11,11 +14,14 @@ export default function Button(props: ButtonProps){
     <TouchableOpacity 
       style={[
         styles.container, 
-        { backgroundColor: props.backgroundColor }
+        { 
+          backgroundColor: props.backgroundColor,
+          marginVertical: props.mrVertical || 0,
+        }
       ]} {...props}>
       <Text 
         style={[styles.buttonText, { color: props.buttonTextColor}]}
-      >Entrar</Text>
+      >{props.title}</Text>
     </TouchableOpacity>
   )
 }

@@ -15,7 +15,14 @@ export default function Auth() {
 					title="Entrar" 
 					backgroundColor="#04d361" 
 					buttonTextColor="#fff"
+					mrVertical={16}
 					onPress={() => console.log("Entrou")} 
+				/>
+				<Button 
+					title="Registrar"
+					backgroundColor="#a4b1b3" 
+					buttonTextColor="#fff"
+					onPress={() => console.log("Registrou")} 
 				/>
 			</View>
 			<View />
